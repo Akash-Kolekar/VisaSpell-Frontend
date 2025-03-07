@@ -1,12 +1,12 @@
 import contractData from "@/constants/StudentVisaSystem.json";
 import verificationHubAbi from "./VerificationHub.json";
+import embassyGatewayAbi from "./EmbassyGateway.json";
+import feeManagerAbi from "./FeeManager.json";
+import timelineEnhancerAbi from "./TimelineEnhancer.json";
+import universityHandlerAbi from "./UniversityHandler.json";
 import type { Abi } from "viem";
 
 
-export const STUDENT_VISA_CONTRACT = {
-    address: "0x1221d1F70EE5Df5C0c2b9Efac309156aB541f300" as `0x${string}`, // Replace with actual deployed contract address
-    abi: contractData.abi,
-  };
   
   export const VISA_STATUS: Record<number, string> = {
     0: "Pending",
@@ -27,10 +27,37 @@ export const STUDENT_VISA_CONTRACT = {
   };
   
 
+  
+export const STUDENT_VISA_CONTRACT = {
+  address: "0x1221d1F70EE5Df5C0c2b9Efac309156aB541f300" as `0x${string}`, // Replace with actual deployed contract address
+  abi: contractData.abi as Abi,
+};
+
 export const VERIFICATION_HUB_CONTRACT = {
   address: "0xFaA35f474b695dDd8823864754C56fB566EFb90d" as `0x${string}`,
   abi: verificationHubAbi.abi as Abi,
 };
+
+export const EMBASSY_GATEWAY_CONTRACT = {
+  address: "0x322Ef8c4c7ec0Dd74F0A493AFDd87d47092Bdf88" as `0x${string}`,
+  abi: embassyGatewayAbi.abi as Abi,
+};
+
+export const FEE_MANAGER_CONTRACT = {
+  address: "0x8BC7017E234Ca88D1A21a023BB98796634fe9588" as `0x${string}`,
+  abi: feeManagerAbi.abi as Abi,
+};
+
+export const TIMELINE_ENHANCER_CONTRACT = {
+  address: "0xf342E9e0995d9677784DD57E876C0B10f89C0593" as `0x${string}`,
+  abi: timelineEnhancerAbi.abi as Abi,
+};
+
+export const UNIVERSITY_HANDLER_CONTRACT = {
+  address: "0xE927A3cE99bBc0204B10Dd81F99e13354a70016D" as `0x${string}`,
+  abi: universityHandlerAbi.abi as Abi,
+};
+
 
   
   

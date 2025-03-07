@@ -17,37 +17,59 @@ export default function Navbar() {
   }, [address, isConnected]);
 
   return (
-    <nav className="bg-blue-500 p-4 flex justify-between items-center">
-      <div className="text-white text-lg font-bold">Student Visa System</div>
-      <div className="space-x-4">
-        <Link href="/" className="text-white hover:underline">
-          Home
-        </Link>
-        {userRoles.includes(ROLES.UNIVERSITY) && (
-          <Link href="/university" className="text-white hover:underline">
-            University
+    <nav className="bg-blue-600">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+        {/* Logo / Title */}
+        <div className="flex items-center">
+          <Link href="/">
+            <span className="text-white text-3xl font-bold">SVS</span>
           </Link>
-        )}
-        {userRoles.includes(ROLES.EMBASSY) && (
-          <Link href="/embassy" className="text-white hover:underline">
-            Embassy
-          </Link>
-        )}
-        {userRoles.includes(ROLES.ADMIN) && (
-          <Link href="/admin" className="text-white hover:underline">
-            Admin
-          </Link>
-        )}
-        {userRoles.includes(ROLES.VERIFIER) && (
-          <Link href="/verifier" className="text-white hover:underline">
-            Verifier
-          </Link>
-        )}
-        <Link href="/profile" className="text-white hover:underline">
-          Profile
-        </Link>
+          <div className="ml-8 flex space-x-6">
+            <Link href="/">
+              <span className="text-white hover:text-blue-200 cursor-pointer">
+                Home
+              </span>
+            </Link>
+            {userRoles.includes(ROLES.UNIVERSITY) && (
+              <Link href="/university">
+                <span className="text-white hover:text-blue-200 cursor-pointer">
+                  University
+                </span>
+              </Link>
+            )}
+            {userRoles.includes(ROLES.EMBASSY) && (
+              <Link href="/embassy">
+                <span className="text-white hover:text-blue-200 cursor-pointer">
+                  Embassy
+                </span>
+              </Link>
+            )}
+            {userRoles.includes(ROLES.ADMIN) && (
+              <Link href="/admin">
+                <span className="text-white hover:text-blue-200 cursor-pointer">
+                  Admin
+                </span>
+              </Link>
+            )}
+            {userRoles.includes(ROLES.VERIFIER) && (
+              <Link href="/verifier">
+                <span className="text-white hover:text-blue-200 cursor-pointer">
+                  Verifier
+                </span>
+              </Link>
+            )}
+            <Link href="/profile">
+              <span className="text-white hover:text-blue-200 cursor-pointer">
+                Profile
+              </span>
+            </Link>
+          </div>
+        </div>
+        {/* Wallet Connect Button */}
+        <div>
+          <ConnectButton showBalance={false} />
+        </div>
       </div>
-      <ConnectButton />
     </nav>
   );
 }

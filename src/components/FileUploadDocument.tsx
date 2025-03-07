@@ -1,32 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAccount, useWriteContract } from "wagmi";
 import { STUDENT_VISA_CONTRACT } from "@/constants/contracts";
-import { create } from "ipfs-http-client";
 
-// Initialize the IPFS client (using a public gateway, e.g., Infura)
-const ipfsClient = create({ url: "https://ipfs.infura.io:5001/api/v0" });
+// We will dynamically load the IPFS HTTP client on the client side.
+async function createIpfsClient() {
+  const { create } = await import("ipfs-http-client");
+  return create({ url: "https://ipfs.infura.io:5001/api/v0" });
+}
 
 export default function FileUploadDocument() {
   const { address, isConnected } = useAccount();
+  const [ipfsClient, setIpfsClient] = useState<any>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
   const [fileHash, setFileHash] = useState<string | null>(null);
   const [expiryDate, setExpiryDate] = useState("");
   const { writeContract, isPending, isSuccess, error } = useWriteContract();
 
-  // Handle file selection
+  // Load IPFS client only on the client side.
+  useEffect(() => {
+    createIpfsClient()
+      .then((client) => setIpfsClient(client))
+      .catch((err) => console.error("Failed to load IPFS client:", err));
+  }, []);
+
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       setSelectedFile(e.target.files[0]);
     }
   };
 
-  // Upload file to IPFS and get the hash
   const handleUpload = async () => {
     if (!selectedFile) {
       alert("Please select a file to upload.");
+      return;
+    }
+    if (!ipfsClient) {
+      alert("IPFS client is not loaded yet. Please try again in a moment.");
       return;
     }
     setUploading(true);
@@ -42,7 +54,6 @@ export default function FileUploadDocument() {
     setUploading(false);
   };
 
-  // Submit the document hash on-chain via the contract
   const handleSubmitDocument = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!isConnected || !address) {
@@ -58,9 +69,8 @@ export default function FileUploadDocument() {
       return;
     }
     try {
-      // Convert expiryDate from a date string to a UNIX timestamp (seconds) as BigInt
+      // Convert expiryDate from a date string to a UNIX timestamp (in seconds) as BigInt
       const expiryTimestamp = BigInt(Math.floor(new Date(expiryDate).getTime() / 1000));
-      // Here we assume DocumentType "2" means "Other" or the appropriate type for file uploads
       await writeContract({
         address: STUDENT_VISA_CONTRACT.address,
         abi: STUDENT_VISA_CONTRACT.abi,
@@ -92,9 +102,9 @@ export default function FileUploadDocument() {
           </div>
           <button
             onClick={handleUpload}
-            disabled={uploading}
+            disabled={uploading || !ipfsClient}
             className={`w-full p-3 rounded-lg font-bold transition-all ${
-              uploading
+              uploading || !ipfsClient
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-blue-500 text-white hover:bg-blue-600"
             }`}
@@ -102,9 +112,7 @@ export default function FileUploadDocument() {
             {uploading ? "Uploading..." : "Upload File to IPFS"}
           </button>
           {fileHash && (
-            <p className="mt-2 text-center text-green-500">
-              File Hash: {fileHash}
-            </p>
+            <p className="mt-2 text-center text-green-500">File Hash: {fileHash}</p>
           )}
           <div className="mt-4">
             <label className="block text-gray-700 font-semibold mb-1">
@@ -134,9 +142,7 @@ export default function FileUploadDocument() {
             </p>
           )}
           {error && (
-            <p className="text-center text-red-500 mt-3">
-              Error: {error.message}
-            </p>
+            <p className="text-center text-red-500 mt-3">Error: {error.message}</p>
           )}
         </>
       )}

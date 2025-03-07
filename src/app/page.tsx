@@ -8,7 +8,7 @@ import TransactionHistory from "@/components/TransactionHistory";
 import DocumentUpload from "@/components/DocumentUpload";
 import BiometricVerification from "@/components/BiometricVerification";
 import UpgradePriority from "@/components/UpgradePriority";
-import FileUploadDocument from "@/components/FileUploadDocument"; // New component
+import FileUploadDocument from "@/components/FileUploadDocument";
 import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";
 import { ROLES, getUserRoles } from "@/constants/roles";
@@ -37,7 +37,7 @@ export default function Home() {
           <DocumentUpload />
           <BiometricVerification />
           <UpgradePriority />
-          <FileUploadDocument /> {/* File upload component for IPFS */}
+          <FileUploadDocument />
         </>
       ) : isConnected ? (
         <p className="text-lg mt-6">
