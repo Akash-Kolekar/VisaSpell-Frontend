@@ -5,6 +5,7 @@ A **Blockchain-based Student Visa Application System** that streamlines the visa
 ---
 
 ## Table of Contents
+
 - [Student Visa System](#student-visa-system)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
@@ -13,6 +14,7 @@ A **Blockchain-based Student Visa Application System** that streamlines the visa
   - [Frontend Architecture](#frontend-architecture)
   - [Roles \& Access](#roles--access)
   - [Installation \& Setup](#installation--setup)
+  - [License](#license)
 
 ---
 
@@ -43,13 +45,13 @@ The **Student Visa System** is designed to provide a transparent, secure, and ef
   - **Admin:** Manages roles, contract settings, and fee withdrawals.
   - **University:** Registers programs and verifies student admissions.
   - **Embassy:** Approves, rejects, or conditionally approves applications and requests additional documents.
-  - **Verifier:** Processes document verifications and updates applicant credibility.
+  - **Verifier:** Processes document verification requests and updates applicant credibility.
   - **Student:** Applies for a visa, submits required documents, and tracks application status.
 
 - **Timeline Enhancement & Predictions:**  
   The system includes a TimelineEnhancer contract to predict processing times and success probabilities based on the application data.
 
-- **Integration with The Graph (Optional):**  
+- **Graph Protocol Integration (Optional):**  
   Indexing of contract events for efficient off-chain querying (planned for future enhancements).
 
 ---
@@ -101,13 +103,17 @@ Additional interfaces and helper contracts (e.g., IEmbassyGateway, IFeeManager, 
 
 - **Admin:**  
   Manages system configuration, role assignments, and fee withdrawals.
+
 - **University:**  
   Registers programs and verifies student admissions.
+
 - **Embassy:**  
   Approves, rejects, or conditionally approves applications; requests additional documents.
+
 - **Verifier:**  
   Processes document verification requests and updates credibility scores.
-- **Student:**  
+
+- **Student (Default):**  
   Applies for visas, submits required documents, and tracks application status.
 
 ---
@@ -115,6 +121,69 @@ Additional interfaces and helper contracts (e.g., IEmbassyGateway, IFeeManager, 
 ## Installation & Setup
 
 1. **Clone the Repository:**
+
    ```bash
    git clone https://github.com/YourUser/student-visa-frontend.git
    cd student-visa-frontend
+
+2. **Install Dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3. **Configure Environment:**
+
+   - **Tailwind:** Ensure your `tailwind.config.js` includes the correct content paths for all your source files.
+   - **RainbowKit/Wagmi:** Update your project ID and chain configurations in `src/lib/wagmi.ts`.
+   - **Contract Addresses:** Update `src/constants/contracts.ts` with your deployed contract addresses and corresponding ABIs.
+
+4. **Running the Application**
+
+   - **Local Development:**
+
+     ```bash
+     npm run dev
+     # or
+     yarn dev
+     ```
+
+     The application will be available at `http://localhost:3000`.
+
+   - **Production Build:**
+
+     ```bash
+     npm run build
+     npm run start
+     # or
+     yarn build
+     yarn start
+     ```
+
+     This will run a production-optimized build.
+
+5. **Deploying the Contracts**
+
+   - **Compile & Test:**
+
+     ```bash
+     forge test
+     # or
+     npx hardhat test
+     ```
+
+   - **Deploy:**
+
+     ```bash
+     npx hardhat run scripts/deploy.ts --network sepolia
+     ```
+
+   - **Update Frontend:** Copy the deployed contract addresses and corresponding ABIs into `src/constants/contracts.ts`.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
