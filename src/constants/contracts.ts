@@ -1,9 +1,9 @@
-import contractData from "@/constants/StudentVisaSystem.json";
 import verificationHubAbi from "./VerificationHub.json";
 import embassyGatewayAbi from "./EmbassyGateway.json";
 import feeManagerAbi from "./FeeManager.json";
 import timelineEnhancerAbi from "./TimelineEnhancer.json";
 import universityHandlerAbi from "./UniversityHandler.json";
+import studentVisaSystemAbi from "./StudentVisaSystem.json";
 import type { Abi } from "viem";
 
 
@@ -29,8 +29,8 @@ import type { Abi } from "viem";
 
   
 export const STUDENT_VISA_CONTRACT = {
-  address: "0x1221d1F70EE5Df5C0c2b9Efac309156aB541f300" as `0x${string}`, // Replace with actual deployed contract address
-  abi: contractData.abi as Abi,
+  address: "0xbF907BAc50fb0C788130968AC740AA12fFdC2eE6" as `0x${string}`, // Replace with actual deployed contract address
+  abi: studentVisaSystemAbi.abi as Abi,
 };
 
 export const VERIFICATION_HUB_CONTRACT = {
@@ -58,6 +58,11 @@ export const UNIVERSITY_HANDLER_CONTRACT = {
   abi: universityHandlerAbi.abi as Abi,
 };
 
+
+export const APPLICATION_ADDRESSES: string[] = [
+  "0xB58634C4465D93A03801693FD6d76997C797e42A", 
+  "0xStudentAddress2",
+];
 
   
   

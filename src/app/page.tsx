@@ -26,10 +26,11 @@ export default function Home() {
   const isStudent = userRoles.includes(ROLES.STUDENT);
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-      <WalletConnect />
+    <div className="max-w-4xl mx-auto py-8 px-4">
+      
+
       {isConnected && isStudent ? (
-        <>
+        <div className="space-y-6">
           <StudentVisaForm />
           <VisaStatus />
           <ApplicationDetails />
@@ -38,12 +39,14 @@ export default function Home() {
           <BiometricVerification />
           <UpgradePriority />
           <FileUploadDocument />
-        </>
+        </div>
       ) : isConnected ? (
         <p className="text-lg mt-6">
           🚀 Welcome! Your assigned roles: {userRoles.join(", ")}.
         </p>
-      ) : null}
-    </main>
+      ) : (
+        <p className="text-center text-red-500 mt-6">Please connect your wallet.</p>
+      )}
+    </div>
   );
 }

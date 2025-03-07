@@ -1,1 +1,294 @@
-{"abi":[{"type":"constructor","inputs":[{"name":"_visaSystem","type":"address","internalType":"address"}],"stateMutability":"nonpayable"},{"type":"function","name":"applicantPredictions","inputs":[{"name":"","type":"address","internalType":"address"},{"name":"","type":"uint256","internalType":"uint256"}],"outputs":[{"name":"estimatedDays","type":"uint256","internalType":"uint256"},{"name":"successProbability","type":"uint256","internalType":"uint256"},{"name":"timestamp","type":"uint256","internalType":"uint256"}],"stateMutability":"view"},{"type":"function","name":"generatePrediction","inputs":[{"name":"applicant","type":"address","internalType":"address"}],"outputs":[{"name":"","type":"tuple","internalType":"struct TimelineEnhancer.Prediction","components":[{"name":"estimatedDays","type":"uint256","internalType":"uint256"},{"name":"successProbability","type":"uint256","internalType":"uint256"},{"name":"timestamp","type":"uint256","internalType":"uint256"}]}],"stateMutability":"nonpayable"},{"type":"error","name":"TimelineEnhancer__VisaSystemNotConfigured","inputs":[]}],"bytecode":{"object":"0x608034606f57601f61077138819003918201601f19168301916001600160401b03831184841017607357808492602094604052833981010312606f57516001600160a01b03811690819003606f575f80546001600160a01b0319169190911790556040516106e990816100888239f35b5f80fd5b634e487b7160e01b5f52604160045260245ffdfe6080806040526004361015610012575f80fd5b5f3560e01c908163bf664cd8146100c8575063f853c56114610032575f80fd5b346100c45760407ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100c457610069610472565b73ffffffffffffffffffffffffffffffffffffffff60243591165f52600160205260405f2080548210156100c4576060916100a391610495565b50805490600260018201549101549060405192835260208301526040820152f35b5f80fd5b346100c45760207ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100c4575f6040610102610472565b9261010c816104db565b828152826020820152015273ffffffffffffffffffffffffffffffffffffffff5f5416801561044a5773ffffffffffffffffffffffffffffffffffffffff604051927f2a35c43400000000000000000000000000000000000000000000000000000000845216806004840152606083602481855afa9283156103bd575f93610406575b50604051917f6db81e39000000000000000000000000000000000000000000000000000000008352816004840152602083602481845afa9283156103bd575f936103c8575b506020602491604051928380927fcec30b710000000000000000000000000000000000000000000000000000000082528660048301525afa80156103bd5761038e575b50605061022383610554565b9311156103855760ff605a5b169160038110156103585760058102908082046005149015171561032b57820180921161032b5760405192610263846104db565b83526020830191825260408301904282525f52600160205260405f208054680100000000000000008110156102fe576102a191600182018155610495565b9290926102d25760609351928381558151600182015560028351910155604051928352516020830152516040820152f35b7f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b7f4e487b71000000000000000000000000000000000000000000000000000000005f52601160045260245ffd5b7f4e487b71000000000000000000000000000000000000000000000000000000005f52602160045260245ffd5b60ff603c61022f565b6020813d6020116103b5575b816103a7602093836104f7565b810103126100c45751610217565b3d915061039a565b6040513d5f823e3d90fd5b9092506020813d6020116103fe575b816103e4602093836104f7565b810103126100c4575160038110156100c4579160206101d4565b3d91506103d7565b92506060833d606011610442575b81610421606093836104f7565b810103126100c4576007835110156100c4576040602084015193015161018f565b3d9150610414565b7f399b1729000000000000000000000000000000000000000000000000000000005f5260045ffd5b6004359073ffffffffffffffffffffffffffffffffffffffff821682036100c457565b80548210156104ae575f52600360205f20910201905f90565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52603260045260245ffd5b6060810190811067ffffffffffffffff8211176102fe57604052565b90601f7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0910116810190811067ffffffffffffffff8211176102fe57604052565b908160209103126100c4575163ffffffff811681036100c45790565b600381101561035857806105ef57506004602073ffffffffffffffffffffffffffffffffffffffff5f5416604051928380927ffbb2da570000000000000000000000000000000000000000000000000000000082525afa80156103bd5763ffffffff915f916105c257501690565b6105e4915060203d6020116105e8575b6105dc81836104f7565b810190610538565b1690565b503d6105d2565b600103610655576004602073ffffffffffffffffffffffffffffffffffffffff5f5416604051928380927fba95e8bd0000000000000000000000000000000000000000000000000000000082525afa80156103bd5763ffffffff915f916105c257501690565b6004602073ffffffffffffffffffffffffffffffffffffffff5f5416604051928380927ef47b650000000000000000000000000000000000000000000000000000000082525afa80156103bd5763ffffffff915f916105c25750169056fea2646970667358221220881a8ec8750ae430000a8fab06e03d76b73cd58d4b82bba601e10e32c67b865864736f6c634300081c0033","sourceMap":"118:2056:32:-:0;;;;;;;;;;;;;-1:-1:-1;;118:2056:32;;;;-1:-1:-1;;;;;118:2056:32;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;118:2056:32;;;;;;;;-1:-1:-1;118:2056:32;;-1:-1:-1;;;;;;118:2056:32;;;;;;;;;;;;;;;;;-1:-1:-1;118:2056:32;;;;;;-1:-1:-1;118:2056:32;;;;;-1:-1:-1;118:2056:32","linkReferences":{}},"deployedBytecode":{"object":"0x6080806040526004361015610012575f80fd5b5f3560e01c908163bf664cd8146100c8575063f853c56114610032575f80fd5b346100c45760407ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100c457610069610472565b73ffffffffffffffffffffffffffffffffffffffff60243591165f52600160205260405f2080548210156100c4576060916100a391610495565b50805490600260018201549101549060405192835260208301526040820152f35b5f80fd5b346100c45760207ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100c4575f6040610102610472565b9261010c816104db565b828152826020820152015273ffffffffffffffffffffffffffffffffffffffff5f5416801561044a5773ffffffffffffffffffffffffffffffffffffffff604051927f2a35c43400000000000000000000000000000000000000000000000000000000845216806004840152606083602481855afa9283156103bd575f93610406575b50604051917f6db81e39000000000000000000000000000000000000000000000000000000008352816004840152602083602481845afa9283156103bd575f936103c8575b506020602491604051928380927fcec30b710000000000000000000000000000000000000000000000000000000082528660048301525afa80156103bd5761038e575b50605061022383610554565b9311156103855760ff605a5b169160038110156103585760058102908082046005149015171561032b57820180921161032b5760405192610263846104db565b83526020830191825260408301904282525f52600160205260405f208054680100000000000000008110156102fe576102a191600182018155610495565b9290926102d25760609351928381558151600182015560028351910155604051928352516020830152516040820152f35b7f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b7f4e487b71000000000000000000000000000000000000000000000000000000005f52601160045260245ffd5b7f4e487b71000000000000000000000000000000000000000000000000000000005f52602160045260245ffd5b60ff603c61022f565b6020813d6020116103b5575b816103a7602093836104f7565b810103126100c45751610217565b3d915061039a565b6040513d5f823e3d90fd5b9092506020813d6020116103fe575b816103e4602093836104f7565b810103126100c4575160038110156100c4579160206101d4565b3d91506103d7565b92506060833d606011610442575b81610421606093836104f7565b810103126100c4576007835110156100c4576040602084015193015161018f565b3d9150610414565b7f399b1729000000000000000000000000000000000000000000000000000000005f5260045ffd5b6004359073ffffffffffffffffffffffffffffffffffffffff821682036100c457565b80548210156104ae575f52600360205f20910201905f90565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52603260045260245ffd5b6060810190811067ffffffffffffffff8211176102fe57604052565b90601f7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0910116810190811067ffffffffffffffff8211176102fe57604052565b908160209103126100c4575163ffffffff811681036100c45790565b600381101561035857806105ef57506004602073ffffffffffffffffffffffffffffffffffffffff5f5416604051928380927ffbb2da570000000000000000000000000000000000000000000000000000000082525afa80156103bd5763ffffffff915f916105c257501690565b6105e4915060203d6020116105e8575b6105dc81836104f7565b810190610538565b1690565b503d6105d2565b600103610655576004602073ffffffffffffffffffffffffffffffffffffffff5f5416604051928380927fba95e8bd0000000000000000000000000000000000000000000000000000000082525afa80156103bd5763ffffffff915f916105c257501690565b6004602073ffffffffffffffffffffffffffffffffffffffff5f5416604051928380927ef47b650000000000000000000000000000000000000000000000000000000082525afa80156103bd5763ffffffff915f916105c25750169056fea2646970667358221220881a8ec8750ae430000a8fab06e03d76b73cd58d4b82bba601e10e32c67b865864736f6c634300081c0033","sourceMap":"118:2056:32:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;374:60;;;;;118:2056;374:60;;;;:::i;:::-;118:2056;;;374:60;;118:2056;374:60;;118:2056;374:60;;118:2056;;;;;;;;;;;;;;;;374:60;118:2056;374:60;;118:2056;;;;;;;;;;;;;;;:::i;:::-;;;;;:::i;:::-;;;;;;;;;;;;;;;638:33;;634:89;;118:2056;;;824:40;118:2056;824:40;;118:2056;824:40;118:2056;824:40;;118:2056;;824:40;;;;;;;;;;;118:2056;;824:40;;118:2056;;;;913:41;118:2056;913:41;;;118:2056;913:41;;118:2056;;913:41;824:40;913:41;;;;;;;;;118:2056;913:41;;;118:2056;;;824:40;118:2056;;;987:41;;;;118:2056;987:41;;;118:2056;987:41;;118:2056;987:41;;;;;;;;118:2056;1113:43;2086:2;1113:43;;;:::i;:::-;2072:26;:16;2086:2;;;118:2056;2091:2;2072:26;118:2056;;;;;;;;2142:1;118:2056;;;;;;2142:1;118:2056;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;1073:219;;118:2056;;;;1073:219;;1266:15;;118:2056;;;;1303:20;118:2056;;;;;;;;;;;;;;;1303:20;118:2056;;;;;:::i;:::-;;;;;;;;;;;;;;;1303:20;118:2056;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;824:40;118:2056;;;;;;;;;824:40;118:2056;;;;;;;;;824:40;118:2056;;;;;;;;;824:40;118:2056;;2072:26;118:2056;2096:2;2072:26;;987:41;118:2056;987:41;;118:2056;987:41;;;;;;118:2056;987:41;;;:::i;:::-;;;118:2056;;;;;987:41;;;;;-1:-1:-1;987:41:32;;;118:2056;;;;;;;;;913:41;;;;118:2056;913:41;;118:2056;913:41;;;;;;118:2056;913:41;;;:::i;:::-;;;118:2056;;;;;;;;;;;913:41;118:2056;913:41;;;;;-1:-1:-1;913:41:32;;824:40;;;118:2056;824:40;;118:2056;824:40;;;;;;118:2056;824:40;;;:::i;:::-;;;118:2056;;;;;;;;;;;;;;;;;;;824:40;;;;;-1:-1:-1;824:40:32;;634:89;680:43;118:2056;680:43;118:2056;;680:43;118:2056;;;;;;;;;;;:::o;:::-;;;;;;;;-1:-1:-1;118:2056:32;;;-1:-1:-1;118:2056:32;;;;;-1:-1:-1;118:2056:32;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;:::o;1397:488::-;118:2056;;;;;;1561:47;;;118:2056;1631:35;;118:2056;;;;;;1631:35;;;;118:2056;1631:35;;;;;;;;118:2056;1631:35;118:2056;1631:35;;;118:2056;;1624:42;:::o;1631:35::-;;;;;;;;;;;;;;;:::i;:::-;;;;;:::i;:::-;118:2056;1624:42;:::o;1631:35::-;;;;;1557:322;118:2056;1687:48;118:2056;;1758:36;;118:2056;;;;;;1758:36;;;;118:2056;1758:36;;;;;;;;118:2056;1758:36;118:2056;1758:36;;;118:2056;;1751:43;:::o;1683:196::-;1832:36;;118:2056;;;;;;1832:36;;;;118:2056;1832:36;;;;;;;;118:2056;1832:36;118:2056;1832:36;;;118:2056;;1825:43;:::o","linkReferences":{}},"methodIdentifiers":{"applicantPredictions(address,uint256)":"f853c561","generatePrediction(address)":"bf664cd8"},"rawMetadata":"{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_visaSystem\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"TimelineEnhancer__VisaSystemNotConfigured\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"applicantPredictions\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"estimatedDays\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"successProbability\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"applicant\",\"type\":\"address\"}],\"name\":\"generatePrediction\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"estimatedDays\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"successProbability\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"internalType\":\"struct TimelineEnhancer.Prediction\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/TimelineEnhancer.sol\":\"TimelineEnhancer\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/access/AccessControl.sol\":{\"keccak256\":\"0xa0e92d42942f4f57c5be50568dac11e9d00c93efcb458026e18d2d9b9b2e7308\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://46326c0bb1e296b67185e81c918e0b40501b8b6386165855df0a3f3c634b6a80\",\"dweb:/ipfs/QmTwyrDYtsxsk6pymJTK94PnEpzsmkpUxFuzEiakDopy4Z\"]},\"lib/openzeppelin-contracts/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0xc1c2a7f1563b77050dc6d507db9f4ada5d042c1f6a9ddbffdc49c77cdc0a1606\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fd54abb96a6156d9a761f6fdad1d3004bc48d2d4fce47f40a3f91a7ae83fc3a1\",\"dweb:/ipfs/QmUrFSGkTDJ7WaZ6qPVVe3Gn5uN2viPb7x7QQ35UX4DofX\"]},\"lib/openzeppelin-contracts/contracts/utils/Context.sol\":{\"keccak256\":\"0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12\",\"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF\"]},\"lib/openzeppelin-contracts/contracts/utils/Pausable.sol\":{\"keccak256\":\"0xb2e5f50762c27fb4b123e3619c3c02bdcba5e515309382e5bfb6f7d6486510bd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1a4b83328c98d518a2699c2cbe9e9b055e78aa57fa8639f1b88deb8b3750b5dc\",\"dweb:/ipfs/QmXdcYj5v7zQxXFPULShHkR5p4Wa2zYuupbHnFdV3cHYtc\"]},\"lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol\":{\"keccak256\":\"0x11a5a79827df29e915a12740caf62fe21ebe27c08c9ae3e09abe9ee3ba3866d3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3cf0c69ab827e3251db9ee6a50647d62c90ba580a4d7bbff21f2bea39e7b2f4a\",\"dweb:/ipfs/QmZiKwtKU1SBX4RGfQtY7PZfiapbbu6SZ9vizGQD9UHjRA\"]},\"lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0xddce8e17e3d3f9ed818b4f4c4478a8262aab8b11ed322f1bf5ed705bb4bd97fa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8084aa71a4cc7d2980972412a88fe4f114869faea3fefa5436431644eb5c0287\",\"dweb:/ipfs/Qmbqfs5dRdPvHVKY8kTaeyc65NdqXRQwRK7h9s5UJEhD1p\"]},\"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x79796192ec90263f21b464d5bc90b777a525971d3de8232be80d9c4f9fb353b8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f6fda447a62815e8064f47eff0dd1cf58d9207ad69b5d32280f8d7ed1d1e4621\",\"dweb:/ipfs/QmfDRc7pxfaXB2Dh9np5Uf29Na3pQ7tafRS684wd3GLjVL\"]},\"src/StudentVisaSystem.sol\":{\"keccak256\":\"0x0982ae7f9cfe2c1ad0e0222ece4e6ab1f00e63d1d6d07c9a406d7b3f2c39d205\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://04e89c5697768c441ba03e1e42c57d6f3022088e974625793a858cb938e4bcab\",\"dweb:/ipfs/QmPgxqBjHBoBjeEJsHjppeyoe2SJzoCPmgDtguk4qFgfyN\"]},\"src/TimelineEnhancer.sol\":{\"keccak256\":\"0x15fbec075a3d53d4f34a1b3519c28798cd4ef3029cf8d460b46a83d1eba936b1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://70acda2458d8f9c80a05595cb70ce8ae5551814fe54537172dd730b9ef310329\",\"dweb:/ipfs/QmTgE3CcaABvGEwDP8kjRrt2jK9NmagXUfWtCbRH6Dd53n\"]},\"src/UniversityHandler.sol\":{\"keccak256\":\"0x86da827b9a07d863b2adde2ce8393a8158f4aa26e5c3f187d646b1a0c3de311d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://15bc9019f7d4a380a025d2030a2c16ac548d5a8ab092a9c44223db541dae66f5\",\"dweb:/ipfs/QmYQqD3qwKeYFYHXA3ZW5YwMx8MnTcKHssqoMD1vC6JHVJ\"]},\"src/VerificationHub.sol\":{\"keccak256\":\"0x608c1509fb9fa621157ca0b3df86566008679bfb74fbcc37d0d67b22e1c9bccf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb36c88d39ddad1d2f0522db3d835b75aed28a585f4c731cce9ce0de0bda5197\",\"dweb:/ipfs/QmWDJa2hppHMGvLhrd5C4PS8GSe7jCEeWqksNu6jFPPeb6\"]},\"src/interface/IFeeManager.sol\":{\"keccak256\":\"0xce6a90c8308d30c663ec1b10a8ac0c28916a6d6c4853544a0de75aecda8431a0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6973a293ab9d1d6aa302a7ff8d09baac773504c6280f597c471681b3eed9d75f\",\"dweb:/ipfs/QmU67zjMyvbTjK2p3PXKaGdoYRZDCrXcJpe95EHghzT4RW\"]},\"src/interface/IUniversityHandler.sol\":{\"keccak256\":\"0xc3c5ad0e4330bc222203a150ca9b979a4b8fb49cc8ee880a2270dcfe269d03bc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://258cad2747be390eb1882e6b3862678273556fb989b094edcd3e29f660963d9f\",\"dweb:/ipfs/QmUdFnZFPEVJCfgxJwu3fM6x8bAZfJmmmttb6Cmeoixc2i\"]},\"src/interface/IVerificationHub.sol\":{\"keccak256\":\"0x80f0c46b47ebcd1984ea72167f53046890328131b03298386b334e2a39c5e742\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://09ada4d9d551b73de0f97179184207f609679b2ea31547043b0032cc355ad01b\",\"dweb:/ipfs/QmVCmF2CJHQMTUyNzemn18fqKnxMJyLnJdhxsFQ78z24G8\"]}},\"version\":1}","metadata":{"compiler":{"version":"0.8.28+commit.7893614a"},"language":"Solidity","output":{"abi":[{"inputs":[{"internalType":"address","name":"_visaSystem","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[],"type":"error","name":"TimelineEnhancer__VisaSystemNotConfigured"},{"inputs":[{"internalType":"address","name":"","type":"address"},{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","name":"applicantPredictions","outputs":[{"internalType":"uint256","name":"estimatedDays","type":"uint256"},{"internalType":"uint256","name":"successProbability","type":"uint256"},{"internalType":"uint256","name":"timestamp","type":"uint256"}]},{"inputs":[{"internalType":"address","name":"applicant","type":"address"}],"stateMutability":"nonpayable","type":"function","name":"generatePrediction","outputs":[{"internalType":"struct TimelineEnhancer.Prediction","name":"","type":"tuple","components":[{"internalType":"uint256","name":"estimatedDays","type":"uint256"},{"internalType":"uint256","name":"successProbability","type":"uint256"},{"internalType":"uint256","name":"timestamp","type":"uint256"}]}]}],"devdoc":{"kind":"dev","methods":{},"version":1},"userdoc":{"kind":"user","methods":{},"version":1}},"settings":{"remappings":["@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/","erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/","forge-std/=lib/forge-std/src/","halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/","openzeppelin-contracts/=lib/openzeppelin-contracts/"],"optimizer":{"enabled":true,"runs":10000},"metadata":{"bytecodeHash":"ipfs"},"compilationTarget":{"src/TimelineEnhancer.sol":"TimelineEnhancer"},"evmVersion":"cancun","libraries":{},"viaIR":true},"sources":{"lib/openzeppelin-contracts/contracts/access/AccessControl.sol":{"keccak256":"0xa0e92d42942f4f57c5be50568dac11e9d00c93efcb458026e18d2d9b9b2e7308","urls":["bzz-raw://46326c0bb1e296b67185e81c918e0b40501b8b6386165855df0a3f3c634b6a80","dweb:/ipfs/QmTwyrDYtsxsk6pymJTK94PnEpzsmkpUxFuzEiakDopy4Z"],"license":"MIT"},"lib/openzeppelin-contracts/contracts/access/IAccessControl.sol":{"keccak256":"0xc1c2a7f1563b77050dc6d507db9f4ada5d042c1f6a9ddbffdc49c77cdc0a1606","urls":["bzz-raw://fd54abb96a6156d9a761f6fdad1d3004bc48d2d4fce47f40a3f91a7ae83fc3a1","dweb:/ipfs/QmUrFSGkTDJ7WaZ6qPVVe3Gn5uN2viPb7x7QQ35UX4DofX"],"license":"MIT"},"lib/openzeppelin-contracts/contracts/utils/Context.sol":{"keccak256":"0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2","urls":["bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12","dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"],"license":"MIT"},"lib/openzeppelin-contracts/contracts/utils/Pausable.sol":{"keccak256":"0xb2e5f50762c27fb4b123e3619c3c02bdcba5e515309382e5bfb6f7d6486510bd","urls":["bzz-raw://1a4b83328c98d518a2699c2cbe9e9b055e78aa57fa8639f1b88deb8b3750b5dc","dweb:/ipfs/QmXdcYj5v7zQxXFPULShHkR5p4Wa2zYuupbHnFdV3cHYtc"],"license":"MIT"},"lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol":{"keccak256":"0x11a5a79827df29e915a12740caf62fe21ebe27c08c9ae3e09abe9ee3ba3866d3","urls":["bzz-raw://3cf0c69ab827e3251db9ee6a50647d62c90ba580a4d7bbff21f2bea39e7b2f4a","dweb:/ipfs/QmZiKwtKU1SBX4RGfQtY7PZfiapbbu6SZ9vizGQD9UHjRA"],"license":"MIT"},"lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol":{"keccak256":"0xddce8e17e3d3f9ed818b4f4c4478a8262aab8b11ed322f1bf5ed705bb4bd97fa","urls":["bzz-raw://8084aa71a4cc7d2980972412a88fe4f114869faea3fefa5436431644eb5c0287","dweb:/ipfs/Qmbqfs5dRdPvHVKY8kTaeyc65NdqXRQwRK7h9s5UJEhD1p"],"license":"MIT"},"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol":{"keccak256":"0x79796192ec90263f21b464d5bc90b777a525971d3de8232be80d9c4f9fb353b8","urls":["bzz-raw://f6fda447a62815e8064f47eff0dd1cf58d9207ad69b5d32280f8d7ed1d1e4621","dweb:/ipfs/QmfDRc7pxfaXB2Dh9np5Uf29Na3pQ7tafRS684wd3GLjVL"],"license":"MIT"},"src/StudentVisaSystem.sol":{"keccak256":"0x0982ae7f9cfe2c1ad0e0222ece4e6ab1f00e63d1d6d07c9a406d7b3f2c39d205","urls":["bzz-raw://04e89c5697768c441ba03e1e42c57d6f3022088e974625793a858cb938e4bcab","dweb:/ipfs/QmPgxqBjHBoBjeEJsHjppeyoe2SJzoCPmgDtguk4qFgfyN"],"license":"MIT"},"src/TimelineEnhancer.sol":{"keccak256":"0x15fbec075a3d53d4f34a1b3519c28798cd4ef3029cf8d460b46a83d1eba936b1","urls":["bzz-raw://70acda2458d8f9c80a05595cb70ce8ae5551814fe54537172dd730b9ef310329","dweb:/ipfs/QmTgE3CcaABvGEwDP8kjRrt2jK9NmagXUfWtCbRH6Dd53n"],"license":"MIT"},"src/UniversityHandler.sol":{"keccak256":"0x86da827b9a07d863b2adde2ce8393a8158f4aa26e5c3f187d646b1a0c3de311d","urls":["bzz-raw://15bc9019f7d4a380a025d2030a2c16ac548d5a8ab092a9c44223db541dae66f5","dweb:/ipfs/QmYQqD3qwKeYFYHXA3ZW5YwMx8MnTcKHssqoMD1vC6JHVJ"],"license":"MIT"},"src/VerificationHub.sol":{"keccak256":"0x608c1509fb9fa621157ca0b3df86566008679bfb74fbcc37d0d67b22e1c9bccf","urls":["bzz-raw://fb36c88d39ddad1d2f0522db3d835b75aed28a585f4c731cce9ce0de0bda5197","dweb:/ipfs/QmWDJa2hppHMGvLhrd5C4PS8GSe7jCEeWqksNu6jFPPeb6"],"license":"MIT"},"src/interface/IFeeManager.sol":{"keccak256":"0xce6a90c8308d30c663ec1b10a8ac0c28916a6d6c4853544a0de75aecda8431a0","urls":["bzz-raw://6973a293ab9d1d6aa302a7ff8d09baac773504c6280f597c471681b3eed9d75f","dweb:/ipfs/QmU67zjMyvbTjK2p3PXKaGdoYRZDCrXcJpe95EHghzT4RW"],"license":"MIT"},"src/interface/IUniversityHandler.sol":{"keccak256":"0xc3c5ad0e4330bc222203a150ca9b979a4b8fb49cc8ee880a2270dcfe269d03bc","urls":["bzz-raw://258cad2747be390eb1882e6b3862678273556fb989b094edcd3e29f660963d9f","dweb:/ipfs/QmUdFnZFPEVJCfgxJwu3fM6x8bAZfJmmmttb6Cmeoixc2i"],"license":"MIT"},"src/interface/IVerificationHub.sol":{"keccak256":"0x80f0c46b47ebcd1984ea72167f53046890328131b03298386b334e2a39c5e742","urls":["bzz-raw://09ada4d9d551b73de0f97179184207f609679b2ea31547043b0032cc355ad01b","dweb:/ipfs/QmVCmF2CJHQMTUyNzemn18fqKnxMJyLnJdhxsFQ78z24G8"],"license":"MIT"}},"version":1},"id":32}
+{
+	"abi": [
+		{
+			"type": "constructor",
+			"inputs": [
+				{ "name": "_visaSystem", "type": "address", "internalType": "address" }
+			],
+			"stateMutability": "nonpayable"
+		},
+		{
+			"type": "function",
+			"name": "applicantPredictions",
+			"inputs": [
+				{ "name": "", "type": "address", "internalType": "address" },
+				{ "name": "", "type": "uint256", "internalType": "uint256" }
+			],
+			"outputs": [
+				{
+					"name": "estimatedDays",
+					"type": "uint256",
+					"internalType": "uint256"
+				},
+				{
+					"name": "successProbability",
+					"type": "uint256",
+					"internalType": "uint256"
+				},
+				{ "name": "timestamp", "type": "uint256", "internalType": "uint256" }
+			],
+			"stateMutability": "view"
+		},
+		{
+			"type": "function",
+			"name": "generatePrediction",
+			"inputs": [
+				{ "name": "applicant", "type": "address", "internalType": "address" }
+			],
+			"outputs": [
+				{
+					"name": "",
+					"type": "tuple",
+					"internalType": "struct TimelineEnhancer.Prediction",
+					"components": [
+						{
+							"name": "estimatedDays",
+							"type": "uint256",
+							"internalType": "uint256"
+						},
+						{
+							"name": "successProbability",
+							"type": "uint256",
+							"internalType": "uint256"
+						},
+						{
+							"name": "timestamp",
+							"type": "uint256",
+							"internalType": "uint256"
+						}
+					]
+				}
+			],
+			"stateMutability": "nonpayable"
+		},
+		{
+			"type": "error",
+			"name": "TimelineEnhancer__VisaSystemNotConfigured",
+			"inputs": []
+		}
+	],
+
+	"methodIdentifiers": {
+		"applicantPredictions(address,uint256)": "f853c561",
+		"generatePrediction(address)": "bf664cd8"
+	},
+	"metadata": {
+		"compiler": { "version": "0.8.28+commit.7893614a" },
+		"language": "Solidity",
+		"output": {
+			"abi": [
+				{
+					"inputs": [
+						{
+							"internalType": "address",
+							"name": "_visaSystem",
+							"type": "address"
+						}
+					],
+					"stateMutability": "nonpayable",
+					"type": "constructor"
+				},
+				{
+					"inputs": [],
+					"type": "error",
+					"name": "TimelineEnhancer__VisaSystemNotConfigured"
+				},
+				{
+					"inputs": [
+						{ "internalType": "address", "name": "", "type": "address" },
+						{ "internalType": "uint256", "name": "", "type": "uint256" }
+					],
+					"stateMutability": "view",
+					"type": "function",
+					"name": "applicantPredictions",
+					"outputs": [
+						{
+							"internalType": "uint256",
+							"name": "estimatedDays",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "successProbability",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "timestamp",
+							"type": "uint256"
+						}
+					]
+				},
+				{
+					"inputs": [
+						{
+							"internalType": "address",
+							"name": "applicant",
+							"type": "address"
+						}
+					],
+					"stateMutability": "nonpayable",
+					"type": "function",
+					"name": "generatePrediction",
+					"outputs": [
+						{
+							"internalType": "struct TimelineEnhancer.Prediction",
+							"name": "",
+							"type": "tuple",
+							"components": [
+								{
+									"internalType": "uint256",
+									"name": "estimatedDays",
+									"type": "uint256"
+								},
+								{
+									"internalType": "uint256",
+									"name": "successProbability",
+									"type": "uint256"
+								},
+								{
+									"internalType": "uint256",
+									"name": "timestamp",
+									"type": "uint256"
+								}
+							]
+						}
+					]
+				}
+			],
+			"devdoc": { "kind": "dev", "methods": {}, "version": 1 },
+			"userdoc": { "kind": "user", "methods": {}, "version": 1 }
+		},
+		"settings": {
+			"remappings": [
+				"@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+				"erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+				"forge-std/=lib/forge-std/src/",
+				"halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/",
+				"openzeppelin-contracts/=lib/openzeppelin-contracts/"
+			],
+			"optimizer": { "enabled": true, "runs": 10000 },
+			"metadata": { "bytecodeHash": "ipfs" },
+			"compilationTarget": { "src/TimelineEnhancer.sol": "TimelineEnhancer" },
+			"evmVersion": "cancun",
+			"libraries": {},
+			"viaIR": true
+		},
+		"sources": {
+			"lib/openzeppelin-contracts/contracts/access/AccessControl.sol": {
+				"keccak256": "0xa0e92d42942f4f57c5be50568dac11e9d00c93efcb458026e18d2d9b9b2e7308",
+				"urls": [
+					"bzz-raw://46326c0bb1e296b67185e81c918e0b40501b8b6386165855df0a3f3c634b6a80",
+					"dweb:/ipfs/QmTwyrDYtsxsk6pymJTK94PnEpzsmkpUxFuzEiakDopy4Z"
+				],
+				"license": "MIT"
+			},
+			"lib/openzeppelin-contracts/contracts/access/IAccessControl.sol": {
+				"keccak256": "0xc1c2a7f1563b77050dc6d507db9f4ada5d042c1f6a9ddbffdc49c77cdc0a1606",
+				"urls": [
+					"bzz-raw://fd54abb96a6156d9a761f6fdad1d3004bc48d2d4fce47f40a3f91a7ae83fc3a1",
+					"dweb:/ipfs/QmUrFSGkTDJ7WaZ6qPVVe3Gn5uN2viPb7x7QQ35UX4DofX"
+				],
+				"license": "MIT"
+			},
+			"lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+				"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
+				"urls": [
+					"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12",
+					"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
+				],
+				"license": "MIT"
+			},
+			"lib/openzeppelin-contracts/contracts/utils/Pausable.sol": {
+				"keccak256": "0xb2e5f50762c27fb4b123e3619c3c02bdcba5e515309382e5bfb6f7d6486510bd",
+				"urls": [
+					"bzz-raw://1a4b83328c98d518a2699c2cbe9e9b055e78aa57fa8639f1b88deb8b3750b5dc",
+					"dweb:/ipfs/QmXdcYj5v7zQxXFPULShHkR5p4Wa2zYuupbHnFdV3cHYtc"
+				],
+				"license": "MIT"
+			},
+			"lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol": {
+				"keccak256": "0x11a5a79827df29e915a12740caf62fe21ebe27c08c9ae3e09abe9ee3ba3866d3",
+				"urls": [
+					"bzz-raw://3cf0c69ab827e3251db9ee6a50647d62c90ba580a4d7bbff21f2bea39e7b2f4a",
+					"dweb:/ipfs/QmZiKwtKU1SBX4RGfQtY7PZfiapbbu6SZ9vizGQD9UHjRA"
+				],
+				"license": "MIT"
+			},
+			"lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
+				"keccak256": "0xddce8e17e3d3f9ed818b4f4c4478a8262aab8b11ed322f1bf5ed705bb4bd97fa",
+				"urls": [
+					"bzz-raw://8084aa71a4cc7d2980972412a88fe4f114869faea3fefa5436431644eb5c0287",
+					"dweb:/ipfs/Qmbqfs5dRdPvHVKY8kTaeyc65NdqXRQwRK7h9s5UJEhD1p"
+				],
+				"license": "MIT"
+			},
+			"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+				"keccak256": "0x79796192ec90263f21b464d5bc90b777a525971d3de8232be80d9c4f9fb353b8",
+				"urls": [
+					"bzz-raw://f6fda447a62815e8064f47eff0dd1cf58d9207ad69b5d32280f8d7ed1d1e4621",
+					"dweb:/ipfs/QmfDRc7pxfaXB2Dh9np5Uf29Na3pQ7tafRS684wd3GLjVL"
+				],
+				"license": "MIT"
+			},
+			"src/StudentVisaSystem.sol": {
+				"keccak256": "0x0982ae7f9cfe2c1ad0e0222ece4e6ab1f00e63d1d6d07c9a406d7b3f2c39d205",
+				"urls": [
+					"bzz-raw://04e89c5697768c441ba03e1e42c57d6f3022088e974625793a858cb938e4bcab",
+					"dweb:/ipfs/QmPgxqBjHBoBjeEJsHjppeyoe2SJzoCPmgDtguk4qFgfyN"
+				],
+				"license": "MIT"
+			},
+			"src/TimelineEnhancer.sol": {
+				"keccak256": "0x15fbec075a3d53d4f34a1b3519c28798cd4ef3029cf8d460b46a83d1eba936b1",
+				"urls": [
+					"bzz-raw://70acda2458d8f9c80a05595cb70ce8ae5551814fe54537172dd730b9ef310329",
+					"dweb:/ipfs/QmTgE3CcaABvGEwDP8kjRrt2jK9NmagXUfWtCbRH6Dd53n"
+				],
+				"license": "MIT"
+			},
+			"src/UniversityHandler.sol": {
+				"keccak256": "0x86da827b9a07d863b2adde2ce8393a8158f4aa26e5c3f187d646b1a0c3de311d",
+				"urls": [
+					"bzz-raw://15bc9019f7d4a380a025d2030a2c16ac548d5a8ab092a9c44223db541dae66f5",
+					"dweb:/ipfs/QmYQqD3qwKeYFYHXA3ZW5YwMx8MnTcKHssqoMD1vC6JHVJ"
+				],
+				"license": "MIT"
+			},
+			"src/VerificationHub.sol": {
+				"keccak256": "0x608c1509fb9fa621157ca0b3df86566008679bfb74fbcc37d0d67b22e1c9bccf",
+				"urls": [
+					"bzz-raw://fb36c88d39ddad1d2f0522db3d835b75aed28a585f4c731cce9ce0de0bda5197",
+					"dweb:/ipfs/QmWDJa2hppHMGvLhrd5C4PS8GSe7jCEeWqksNu6jFPPeb6"
+				],
+				"license": "MIT"
+			},
+			"src/interface/IFeeManager.sol": {
+				"keccak256": "0xce6a90c8308d30c663ec1b10a8ac0c28916a6d6c4853544a0de75aecda8431a0",
+				"urls": [
+					"bzz-raw://6973a293ab9d1d6aa302a7ff8d09baac773504c6280f597c471681b3eed9d75f",
+					"dweb:/ipfs/QmU67zjMyvbTjK2p3PXKaGdoYRZDCrXcJpe95EHghzT4RW"
+				],
+				"license": "MIT"
+			},
+			"src/interface/IUniversityHandler.sol": {
+				"keccak256": "0xc3c5ad0e4330bc222203a150ca9b979a4b8fb49cc8ee880a2270dcfe269d03bc",
+				"urls": [
+					"bzz-raw://258cad2747be390eb1882e6b3862678273556fb989b094edcd3e29f660963d9f",
+					"dweb:/ipfs/QmUdFnZFPEVJCfgxJwu3fM6x8bAZfJmmmttb6Cmeoixc2i"
+				],
+				"license": "MIT"
+			},
+			"src/interface/IVerificationHub.sol": {
+				"keccak256": "0x80f0c46b47ebcd1984ea72167f53046890328131b03298386b334e2a39c5e742",
+				"urls": [
+					"bzz-raw://09ada4d9d551b73de0f97179184207f609679b2ea31547043b0032cc355ad01b",
+					"dweb:/ipfs/QmVCmF2CJHQMTUyNzemn18fqKnxMJyLnJdhxsFQ78z24G8"
+				],
+				"license": "MIT"
+			}
+		},
+		"version": 1
+	},
+	"id": 32
+}
