@@ -17,5 +17,5 @@ export const config = getDefaultConfig({
     scrollSepoliaChain,
     vanguardVanarChain,
   ],
-  ssr: true,
+  // ssr: true,
 });

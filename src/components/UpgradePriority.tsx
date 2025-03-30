@@ -74,68 +74,91 @@ export default function UpgradePriority() {
         args: [newPriority],
         value: requiredFee,
       });
-      alert("Priority upgraded successfully!");
     } catch (err: any) {
       console.error("Upgrade failed:", err);
-      alert("Failed to upgrade priority. Check the console for details.");
     }
   };
 
   return (
-    <div className="max-w-lg w-full p-8 bg-white shadow-lg rounded-xl mt-6">
-      <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">
+    <div className="max-w-lg w-full p-8 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+      <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 pb-3 border-b border-gray-200 dark:border-gray-700">
         Upgrade Processing Priority
       </h2>
+      
       {!isConnected ? (
-        <p className="text-center text-red-500">
-          Connect your wallet to upgrade priority.
-        </p>
+        <div className="p-5 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-800/30">
+          <p className="text-center text-red-600 dark:text-red-300 font-medium">
+            Please connect your wallet to upgrade priority.
+          </p>
+        </div>
       ) : (
-        <>
-          <p className="mb-2">
-            Current Priority:{" "}
-            {currentPriority === 0
-              ? "Standard"
-              : currentPriority === 1
-              ? "Expedited"
-              : currentPriority === 2
-              ? "Emergency"
-              : "Unknown"}
-          </p>
-          <select
-            className="w-full p-3 border rounded-lg mb-4 focus:ring-2 focus:ring-blue-400"
-            value={selectedPriority}
-            onChange={(e) => setSelectedPriority(e.target.value)}
-          >
-            <option value="0">Standard</option>
-            <option value="1">Expedited</option>
-            <option value="2">Emergency</option>
-          </select>
-          <p className="mb-4">
-            Required Additional Fee: {Number(requiredFee) / 1e18} ETH
-          </p>
+        <div className="space-y-6">
+          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 p-4 rounded-lg border border-indigo-100 dark:border-indigo-800/30">
+            <p className="text-sm text-gray-500 dark:text-gray-400">Current Priority</p>
+            <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+              {currentPriority === 0
+                ? "Standard"
+                : currentPriority === 1
+                ? "Expedited"
+                : currentPriority === 2
+                ? "Emergency"
+                : "Unknown"}
+            </p>
+          </div>
+          
+          <div className="space-y-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+              Select New Priority
+            </label>
+            <select
+              className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:focus:ring-indigo-400 dark:focus:border-indigo-400 text-gray-800 dark:text-gray-200"
+              value={selectedPriority}
+              onChange={(e) => setSelectedPriority(e.target.value)}
+            >
+              <option value="0">Standard</option>
+              <option value="1">Expedited</option>
+              <option value="2">Emergency</option>
+            </select>
+          </div>
+          
+          <div className="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg border border-gray-200 dark:border-gray-600">
+            <p className="text-sm text-gray-500 dark:text-gray-400">Required Additional Fee</p>
+            <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+              {Number(requiredFee) / 1e18} ETH
+            </p>
+          </div>
+          
           <button
             onClick={handleUpgrade}
-            disabled={isPending}
-            className={`w-full p-3 rounded-lg font-bold transition-all ${
-              isPending
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-blue-500 text-white hover:bg-blue-600"
+            disabled={isPending || requiredFee <= 0}
+            className={`w-full py-3 px-4 rounded-lg font-medium transition-all ${
+              isPending || requiredFee <= 0
+                ? "bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed"
+                : "bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-indigo-700 hover:to-blue-600 text-white shadow-sm"
             }`}
           >
-            {isPending ? "Processing..." : "Upgrade Priority"}
+            {isPending ? "Processing..." : requiredFee <= 0 ? "No Upgrade Available" : "Upgrade Priority"}
           </button>
+          
           {isSuccess && (
-            <p className="text-center text-green-500 mt-3">
-              Priority upgraded successfully!
-            </p>
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-100 dark:border-green-800/30">
+              <p className="text-center text-green-600 dark:text-green-300 font-medium">
+                Priority upgraded successfully!
+              </p>
+            </div>
           )}
+          
           {error && (
-            <p className="text-center text-red-500 mt-3">
-              Error: {error.message}
-            </p>
+            <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-800/30">
+              <p className="text-center text-red-600 dark:text-red-300 font-medium">
+                Error upgrading priority
+              </p>
+              <p className="text-center text-xs text-red-500 mt-1 font-mono break-words">
+                {error.message.slice(0, 100)}...
+              </p>
+            </div>
           )}
-        </>
+        </div>
       )}
     </div>
   );
